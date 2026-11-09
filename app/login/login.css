@@ -1,0 +1,359 @@
+/* ===== Halaman Login SPMB — SMK Citra Negara ===== */
+.lg-page {
+  --green-dark: #1f6f1a;
+  --green-text: #2c6a22;
+  --green-bright: #3ddc2f;
+  --green-border: #6aa55f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  font-family: "Poppins", "Nunito", "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+.lg-nav {
+  height: 76px;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d0d0d;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.lg-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.lg-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.lg-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.lg-brand-title {
+  color: var(--green-bright);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.lg-brand-sub {
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.lg-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.lg-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.lg-links a:hover {
+  color: var(--green-bright);
+}
+
+.lg-links .lg-nav-cta {
+  border: 1px solid #3a8a2c;
+  border-radius: 999px;
+  padding: 10px 30px;
+  margin-left: 10px;
+}
+
+.lg-links .lg-nav-cta:hover {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+/* ---------- Layout utama ---------- */
+.lg-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  min-height: 0;
+}
+
+/* ---------- Kiri: foto gedung ---------- */
+.lg-hero {
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/gedung.jpg") center / cover no-repeat;
+  color: #fff;
+}
+
+.lg-hero-text {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+}
+
+.lg-hero h1 {
+  font-size: clamp(56px, 7vw, 100px);
+  line-height: 1;
+  font-weight: 800;
+  margin: 0;
+}
+
+.lg-hero h2 {
+  margin: 8px 0 4px;
+  font-size: clamp(22px, 2.6vw, 38px);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.lg-hero p {
+  margin: 0;
+  font-size: clamp(14px, 1.3vw, 20px);
+  font-weight: 500;
+}
+
+/* ---------- Kanan: panel form ---------- */
+.lg-panel {
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  padding: 48px 5%;
+  overflow-y: auto;
+}
+
+.lg-card {
+  width: 100%;
+  max-width: 560px;
+}
+
+.lg-cap {
+  color: var(--green-text);
+  margin-bottom: 4px;
+}
+
+.lg-welcome {
+  margin: 0;
+  color: var(--green-text);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.lg-welcome-sub {
+  margin: 4px 0 22px;
+  max-width: 260px;
+  color: var(--green-text);
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Tabs Masuk / Daftar */
+.lg-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.lg-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--green-text);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lg-tab-active {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+/* Input */
+.lg-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 46px;
+  margin-bottom: 14px;
+  background: #fff;
+  border: 1px solid var(--green-border);
+  border-radius: 6px;
+  padding: 0 14px;
+}
+
+.lg-field-icon {
+  color: var(--green-dark);
+  flex-shrink: 0;
+}
+
+.lg-field input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+}
+
+.lg-field input::placeholder {
+  color: #555;
+  font-weight: 700;
+}
+
+.lg-field:focus-within {
+  border-color: var(--green-dark);
+  box-shadow: 0 0 0 2px rgba(31, 111, 26, 0.2);
+}
+
+.lg-eye {
+  border: none;
+  background: none;
+  color: var(--green-dark);
+  display: flex;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Ingat saya / lupa password */
+.lg-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4px 0 26px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green-text);
+}
+
+.lg-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.lg-remember input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--green-dark);
+}
+
+.lg-forgot {
+  color: var(--green-text);
+  text-decoration: none;
+}
+
+.lg-forgot:hover {
+  text-decoration: underline;
+}
+
+.lg-error {
+  margin: -12px 0 12px;
+  color: #b3261e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Tombol */
+.lg-submit {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 6px;
+  background: var(--green-dark);
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lg-submit:hover:not(:disabled) {
+  background: #185a14;
+}
+
+.lg-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.lg-or {
+  text-align: center;
+  margin: 14px 0;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--green-text);
+}
+
+.lg-google {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--green-border);
+  border-radius: 6px;
+  color: var(--green-text);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lg-foot {
+  text-align: center;
+  margin: 16px 0 0;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--green-text);
+}
+
+.lg-foot a {
+  color: var(--green-text);
+  text-decoration: underline;
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 900px) {
+  .lg-links a:not(.lg-nav-cta) {
+    display: none;
+  }
+
+  .lg-main {
+    grid-template-columns: 1fr;
+  }
+
+  .lg-hero {
+    min-height: 220px;
+  }
+}

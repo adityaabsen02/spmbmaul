@@ -1,0 +1,28 @@
+/* Tambahan khusus area Kepala Sekolah (selain admin.css) */
+.kp-stats4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kp-banner { min-height: 9.6rem; padding: 2rem 2.8rem; }
+.kp-banner h2 { font-size: 2.4rem; line-height: 3.2rem; }
+.kp-banner p { margin-top: 0.4rem; font-size: 1.3rem; }
+
+.kp-bar { margin-top: 1.4rem; }
+.kp-bar span { display: block; color: #3d443f; font-size: 1.25rem; }
+.kp-bar-track { height: 0.8rem; margin-top: 0.6rem; overflow: hidden; border-radius: 0.4rem; background: #e3e6e3; }
+.kp-bar-fill { height: 100%; border-radius: 0.4rem; background: #2f8f3a; }
+
+.kp-gelap { margin-bottom: 2rem; padding: 2.2rem; border-radius: 1.4rem; background: #0e1511; color: #fff; }
+.kp-gelap h3 { margin: 0; font-size: 1.8rem; font-weight: 700; }
+.kp-gelap p { margin: 0.6rem 0 1.8rem; color: #b6c0b9; font-size: 1.25rem; }
+
+.kp-filter { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; }
+.kp-filter .ad-select { width: 19rem; height: 4rem; background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>") no-repeat right 1.2rem center; }
+.kp-cek { width: 1.7rem; height: 1.7rem; accent-color: #166534; cursor: pointer; }
+.kp-row td { height: 5.6rem; }
+
+.kp-rekap td { height: 5.2rem; }
+
+@media print {
+  .ad-side, .ad-topbar, .kp-aksi, .ad-banner { display: none !important; }
+  .ad-shell { display: block; background: #fff; }
+  .ad-main { padding: 0; }
+  .ad-card, .ad-stat { box-shadow: none; border: 1px solid #ddd; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
